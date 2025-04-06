@@ -171,7 +171,7 @@ public class FFmpegKitFlutterPlugin implements FlutterPlugin, ActivityAware, Met
     // --- V2 EMBEDDING CHANGE: Setup happens in onAttachedToEngine ---
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
-        Log.d(LIBRARY_NAME, "FFmpegKitFlutterPlugin onAttachedToEngine.");
+        Log.d(LIBRARY_NAME, "########## onAttachedToEngine CALLED ##########.");
         this.context = binding.getApplicationContext();
 
         // Initialize channels
@@ -196,7 +196,7 @@ public class FFmpegKitFlutterPlugin implements FlutterPlugin, ActivityAware, Met
     // --- V2 EMBEDDING CHANGE: Activity lifecycle methods ---
     @Override
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
-        Log.d(LIBRARY_NAME, String.format("FFmpegKitFlutterPlugin %s attached to activity %s.", this, binding.getActivity()));
+        Log.d(LIBRARY_NAME, String.format("########## onAttachedToActivity CALLED ##########", this, binding.getActivity()));
         this.activity = binding.getActivity();
         this.activityPluginBinding = binding;
         // Register listeners that need the Activity
